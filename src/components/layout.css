@@ -7,6 +7,16 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+* {
+  position: relative;
+  box-sizing: inherit;
+}
+@media print {
 }
 article,
 aside,
