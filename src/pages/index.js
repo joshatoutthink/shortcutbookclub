@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
           <p className="site-description">{siteDescription}</p>
           <ThemeButton
             as="a"
-            href="https://www.instagram.com/shortcutbookclub/"
+            href="https://www.instagram.com/shortcutbookclub"
             style={{ padding: "15px" }}
           >
             Join Our Book Club
