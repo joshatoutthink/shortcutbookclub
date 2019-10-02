@@ -1,7 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-console.log(`${process.env.WP_URL}/graphql`)
+console.log(`${process.env.WP_URL}`)
 module.exports = {
   siteMetadata: {
     title: `Short Cut Book Club`,
@@ -18,7 +18,7 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: `wordpress`,
         // Url to query from
-        url: `${process.env.WP_URL}/graphql`,
+        url: `${process.env.WP_URL}`,
       },
     },
     `gatsby-plugin-styled-components`,
