@@ -57,6 +57,7 @@ const HeaderStyled = styled.header`
   ${screenAbove(
     screen.mobile,
     `
+    padding: 0 20px;
     width:100%;
     z-index:1000000;
     position:absolute;
