@@ -54,10 +54,18 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
+  ${screenBelow(
+    screen.mobile,
+    `
+    .site-title a{
+      margin-right:20px
+    }
+  `
+  )}
   ${screenAbove(
     screen.mobile,
     `
-    padding: 0 20px;
+    
     width:100%;
     z-index:1000000;
     position:absolute;
