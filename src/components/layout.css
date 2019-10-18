@@ -633,7 +633,7 @@ pre tt:after {
 
 .wp-block-button__link {
   background: #334a33;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: white !important;
   font-family: "Source Sans Pro", sans;
@@ -647,4 +647,6 @@ pre tt:after {
   padding: 10px 15px;
   border-radius: 4px;
   text-align: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
