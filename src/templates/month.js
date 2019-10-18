@@ -157,6 +157,10 @@ const MonthLayout = styled.div`
       .btn-group {
         display: flex;
         flex-wrap:wrap;
+        a{
+          margin-right:20px;
+          margin-bottom:10px;
+        }
       }
       margin-bottom: 20px;
     }
@@ -182,6 +186,11 @@ const MonthLayout = styled.div`
       .book-img{
         grid-column:1/2;
         grid-row:1/4;
+        max-height:300px;
+        img{
+          object-fit:cover;
+          object-position:center top;
+        }
       }
       
       .discussion-guide{

@@ -13,7 +13,6 @@ const ThemeButton = styled(Link)`
   text-transform: uppercase;
   font-size: 14px;
   background: ${primaryColor};
-  margin-right: 20px;
   padding: 10px 15px;
   border-radius: 4px;
   text-align: center;

@@ -232,6 +232,10 @@ export const UpdateBlock = styled.section`
   li {
     list-style: none;
   }
+  .but-link {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
 
   .currently-reading__post {
     ${screenAbove(
@@ -255,6 +259,11 @@ export const UpdateBlock = styled.section`
       .book-img{
         grid-column:1/2;
         grid-row:1/4;
+        max-height:300px;
+        img{
+          object-fit:cover;
+          object-position:center top;
+        }
       }
       .book-content{
         grid-column:2/3
@@ -294,6 +303,7 @@ export const UpdateBlock = styled.section`
       }
     }
     .btn-group {
+      margin-top: 10px;
       display: flex;
       flex-wrap: wrap;
       ${fonts("heading")}
@@ -303,6 +313,7 @@ export const UpdateBlock = styled.section`
         color: white;
         background: ${primaryColor};
         margin-right: 20px;
+        margin-bottom: 10px;
         padding: 10px 15px;
         border-radius: 4px;
       }

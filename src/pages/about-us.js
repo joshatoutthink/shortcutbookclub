@@ -11,6 +11,7 @@ import { marginBottom } from "../theme/spaceing"
 import ThemeButton from "../components/styled-elements/ThemeButton"
 import { screen, screenBelow, screenAbove } from "../theme/mediaQueries"
 import { HeroBlock } from "./index"
+import { contentMaxWidth } from "../theme/widths"
 
 export const data = graphql`
   {
@@ -78,4 +79,7 @@ const AboutHeroBlock = styled(HeroBlock)`
   grid-template-rows: 20vh 10 vh auto;
 `
 
-const PageContent = styled.div``
+const PageContent = styled.div`
+  width: ${contentMaxWidth};
+  margin: 0 auto;
+`
