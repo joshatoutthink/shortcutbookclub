@@ -33,11 +33,11 @@ export const data = graphql`
       posts(first: 1) {
         nodes {
           BookInfo {
-            bookExcerpt
             bookAuthor
             bookCover {
               sourceUrl(size: LARGE)
             }
+            bookExcerpt
             bookLinks {
               linkText
               linkUrl
