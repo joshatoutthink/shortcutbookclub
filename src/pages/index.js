@@ -33,6 +33,7 @@ export const data = graphql`
       posts(first: 1) {
         nodes {
           BookInfo {
+            bookExcerpt
             bookAuthor
             bookCover {
               sourceUrl(size: LARGE)
@@ -99,7 +100,12 @@ const IndexPage = ({ data }) => {
         <div className="home__posts">
           <h2>We are currently Reading</h2>
           {posts.nodes.map(post => {
-            const { bookCover, bookAuthor, bookLinks } = post.BookInfo
+            const {
+              bookCover,
+              bookAuthor,
+              bookLinks,
+              bookExcerpt,
+            } = post.BookInfo
             const { slug } = post.months.nodes[0]
             return (
               <li key={post.id} className="currently-reading__post">
@@ -140,7 +146,7 @@ const IndexPage = ({ data }) => {
                 <div className="book-content">
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: post.excerpt,
+                      __html: bookExcerpt,
                     }}
                   />
                   {<Link to={slug}>Read More &rarr;</Link>}
@@ -259,6 +265,7 @@ export const UpdateBlock = styled.section`
       .book-img{
         grid-column:1/2;
         grid-row:1/4;
+        overflow:hidden;
         max-height:300px;
         img{
           object-fit:cover;

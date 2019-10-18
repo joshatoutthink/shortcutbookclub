@@ -187,6 +187,7 @@ const MonthLayout = styled.div`
         grid-column:1/2;
         grid-row:1/4;
         max-height:300px;
+        overflow:hidden;
         img{
           object-fit:cover;
           object-position:center top;
