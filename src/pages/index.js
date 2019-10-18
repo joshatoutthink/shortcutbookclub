@@ -10,6 +10,7 @@ import { black, primaryColor, sephia, secondaryColor } from "../theme/colors"
 import { marginBottom } from "../theme/spaceing"
 import ThemeButton from "../components/styled-elements/ThemeButton"
 import { screen, screenBelow, screenAbove } from "../theme/mediaQueries"
+import { contentMaxWidth } from "../theme/widths"
 
 export const data = graphql`
   {
@@ -74,7 +75,7 @@ const IndexPage = ({ data }) => {
             alt="sky"
           />
         </div>
-        <div className="hero__site-info">
+        <div className="hero__site-info" style={{ margin: "0 auto" }}>
           <div className="logo">
             <Logo />
           </div>
@@ -168,15 +169,17 @@ export default IndexPage
 const HeroBlock = styled.section`
   display: grid;
   grid-template-rows: 30vh 15vh auto;
+
+  grid-template-columns: 100%;
   background: white;
   text-align: center;
   padding: 50px 0;
   padding-top: 0;
   ${fonts("copy")}
-
+  max-width:100%;
   .hero-image {
     grid-row: 1/3;
-    grid-column: 1/-1;
+    grid-column: 1/2;
     height: 100%;
     img {
       object-fit: cover;
@@ -186,11 +189,12 @@ const HeroBlock = styled.section`
     }
   }
   .hero__site-info {
-    max-width: 763px;
-    margin: 0 auto;
+    justify-self: center;
+    max-width: ${contentMaxWidth};
+    grid-column: 1/2;
     padding: 0 20px;
     grid-row: 2/4;
-    grid-column: 1/-1;
+
     .site-name {
       ${fonts("heading")}
       font-size: 24px;

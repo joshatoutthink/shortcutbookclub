@@ -630,3 +630,21 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.wp-block-button__link {
+  background: #334a33;
+  display: block;
+  text-decoration: none;
+  color: white !important;
+  font-family: "Source Sans Pro", sans;
+  font-weight: 600;
+  line-height: 1.2em;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-align: center;
+}
