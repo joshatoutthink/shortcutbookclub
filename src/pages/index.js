@@ -153,7 +153,11 @@ const IndexPage = ({ data }) => {
                       __html: bookExcerpt,
                     }}
                   />
-                  {<Link to={slug}>Read More &rarr;</Link>}
+                  {
+                    <Link to={slug} style={{ color: secondaryColor }}>
+                      Read More &rarr;
+                    </Link>
+                  }
                 </div>
               </li>
             )
