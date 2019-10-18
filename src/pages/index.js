@@ -138,7 +138,7 @@ const IndexPage = ({ data }) => {
                   </ul>
                 </div>
                 <div className="book-content">
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: post.excerpt,
                     }}
