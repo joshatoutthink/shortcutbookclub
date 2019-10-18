@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 
 import ThemeButton from "../components/styled-elements/ThemeButton"
 import { contentMaxWidth } from "../theme/widths"
-import { primaryColor } from "../theme/colors"
+import { primaryColor, secondaryColor } from "../theme/colors"
 import { screen, screenAbove } from "../theme/mediaQueries"
 import { fonts } from "../theme/fonts"
 
@@ -53,7 +53,7 @@ const Month = ({ data }) => {
 
       <Layout>
         <MonthLayout>
-          <div className="page-name">
+          <div className="page-name" style={{ color: secondaryColor }}>
             <h1>{name}</h1>
           </div>
           <section className="book">
@@ -79,7 +79,7 @@ const Month = ({ data }) => {
               </ul>
             </div>
             <div className="discussion-guide">
-              <h3>Get the discussion guide</h3>
+              <h3>Get the guide</h3>
               <ThemeButton to={`${slug}/${discussionGuide.nodes[0].slug}`}>
                 discussion guide
               </ThemeButton>
@@ -121,7 +121,7 @@ const MonthLayout = styled.div`
   h1 {
     ${fonts("heading")}
     font-size: 24px;
-    color: ${primaryColor};
+    color: ${secondaryColor};
   }
   
   h3 {

@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Logo from "../components/Logo"
 import SEO from "../components/seo"
 import { fonts } from "../theme/fonts"
-import { black, primaryColor, sephia } from "../theme/colors"
+import { black, primaryColor, sephia, secondaryColor } from "../theme/colors"
 import { marginBottom } from "../theme/spaceing"
 import ThemeButton from "../components/styled-elements/ThemeButton"
 import { screen, screenBelow, screenAbove } from "../theme/mediaQueries"
@@ -112,7 +112,9 @@ const IndexPage = ({ data }) => {
               <li key={post.id} className="currently-reading__post">
                 <div className="book-info">
                   <h3>
-                    <Link to={slug}>{post.months.nodes[0].name}</Link>
+                    <Link to={slug} style={{ color: secondaryColor }}>
+                      {post.months.nodes[0].name}
+                    </Link>
                   </h3>
                   <h4>
                     <Link to={slug}>
@@ -150,11 +152,7 @@ const IndexPage = ({ data }) => {
                       __html: bookExcerpt,
                     }}
                   />
-                  {
-                    <Link to={slug} style={{ color: "#BD5719" }}>
-                      Read More &rarr;
-                    </Link>
-                  }
+                  {<Link to={slug}>Read More &rarr;</Link>}
                 </div>
               </li>
             )
@@ -292,7 +290,7 @@ export const UpdateBlock = styled.section`
     h3 {
       font-size: 14px;
       a {
-        color: ${primaryColor};
+        color: ${secondaryColor};
       }
       margin-bottom: 6px;
     }

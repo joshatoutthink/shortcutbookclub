@@ -80,7 +80,7 @@ const AboutHeroBlock = styled(HeroBlock)`
 `
 
 const PageContent = styled.div`
-  width: ${contentMaxWidth};
+  max-width: ${contentMaxWidth};
   margin: 0 auto;
   ${screenBelow(
     screen.mobile,

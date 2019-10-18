@@ -9,7 +9,7 @@ import ThemeButton from "../components/styled-elements/ThemeButton"
 import { contentMaxWidth } from "../theme/widths"
 import { screenAbove, screen } from "../theme/mediaQueries"
 import { fonts } from "../theme/fonts"
-import { primaryColor } from "../theme/colors"
+import { primaryColor, secondaryColor } from "../theme/colors"
 
 export const data = graphql`
   query DISCUSSION_GUIDE_QUERY($slug: String!) {
@@ -48,7 +48,7 @@ const discussionGuide = ({ data }) => {
           <HeaderInfo>
             <div className="info">
               <h1>Discussion Guide</h1>
-              <h2>{month.name}</h2>
+              <h2 style={{ color: secondaryColor }}>{month.name}</h2>
               <h3>{month.posts.nodes[0].title}</h3>
             </div>
             <div className="printme">
@@ -82,6 +82,7 @@ export default discussionGuide
 
 const HeaderInfo = styled.div`
 padding:20px;
+
 ${fonts("heading")}
   max-width: ${contentMaxWidth};
   margin: 0 auto;
@@ -136,6 +137,10 @@ ${fonts("copy")}
   li {
     font-size: 20px;
     margin-bottom: 75px;
+    @media print{
+      margin-top:100px;
+      margin-bottom: 200px;
+    }
 
   }
   .question{

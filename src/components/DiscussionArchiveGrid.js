@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ThemeButton from "./styled-elements/ThemeButton"
-import { sephia } from "../theme/colors"
+import { sephia, secondaryColor } from "../theme/colors"
 
 const DiscussionArchiveGrid = ({ data }) => {
   const guides = data.wordpress.discussionGuide.nodes
@@ -14,7 +14,7 @@ const DiscussionArchiveGrid = ({ data }) => {
 
         return (
           <li>
-            <h3>{name}</h3>
+            <h3 style={{ color: secondaryColor }}>{name}</h3>
             <div className="book-img">
               <img src={posts.nodes[0].BookInfo.bookCover.sourceUrl} alt="" />
             </div>
