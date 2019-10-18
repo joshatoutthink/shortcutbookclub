@@ -22,6 +22,7 @@ export const data = graphql`
     wordpress {
       pages(where: { title: "short cut book club" }) {
         nodes {
+          content(format: RENDERED)
           SiteData {
             heroImage {
               sourceUrl(size: LARGE)
@@ -79,7 +80,12 @@ const IndexPage = ({ data }) => {
           <div className="site-name">
             <h1>{siteTitle}</h1>
           </div>
-          <p className="site-description">{siteDescription}</p>
+          <div
+            className="site-description"
+            dangerouslySetInnerHTML={{
+              __html: data.wordpress.pages.nodes[0].content,
+            }}
+          />
           <ThemeButton
             as="a"
             href="https://www.instagram.com/shortcutbookclub"
@@ -304,3 +310,4 @@ export const UpdateBlock = styled.section`
     }
   }
 `
+export { HeroBlock }

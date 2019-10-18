@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, withAssetPrefix } from "gatsby"
+import { useStaticQuery, graphql, withAssetPrefix, Link } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
@@ -53,7 +53,9 @@ const Layout = ({ children }) => {
               <div className="logo">
                 <Logo />
               </div>
-              <h1>Short Cut Book Club</h1>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <h1>Short Cut Book Club</h1>
+              </Link>
             </div>
             <MainMenu layout="sidebar" />
           </div>

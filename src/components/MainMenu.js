@@ -14,14 +14,14 @@ const MainMenu = ({ layout = "sidebar" }) => {
         <Link to="/books">Books</Link>
       </li>
       <li>
-        <Link to="/discussion-guides">Discussions</Link>
+        <Link to="/discussion-guides">Discussion Guides</Link>
       </li>
       {/* <li>
         <Link>Polling</Link>
-      </li>
+      </li>*/}
       <li>
-        <Link>About</Link>
-      </li> */}
+        <Link to="/about-us">About Our Club</Link>
+      </li>
     </MenuStyled>
   )
 }
@@ -33,30 +33,44 @@ const MenuStyled = styled.ul`
   z-index: 1;
   li {
     list-style: none;
-    padding: 20px;
+    
     margin: 0px;
     &:nth-child(odd) {
-      background: ${lightBlack};
+      /* background: ${lightBlack}; */
     }
+    
   }
   a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    display:block;
+    width:100%;
+    padding: 20px;
+    height:100%;
     &:hover,
     &:focus {
+      
+      background: ${lightBlack};
       color: white;
     }
     ${fonts("heading")}
     font-size: 20px;
   }
+  @keyframes slideIn {
+    from{
+      opacity:.3;
+      transform:translateY(-100px);
+    }
+  }
   ${({ layout }) =>
     layout === "mobile" &&
     `
+    animation: slideIn .2s ease-in;
     padding-top:10px;
     position:absolute;
     top:80px;
     left:0;
-    min-height:100vh;
+    
     background:${black};
     width:250px;
     `}
