@@ -106,6 +106,7 @@ const IndexPage = ({ data }) => {
               bookLinks,
               bookExcerpt,
             } = post.BookInfo
+            console.log(bookExcerpt)
             const { slug } = post.months.nodes[0]
             return (
               <li key={post.id} className="currently-reading__post">
@@ -149,7 +150,11 @@ const IndexPage = ({ data }) => {
                       __html: bookExcerpt,
                     }}
                   />
-                  {<Link to={slug}>Read More &rarr;</Link>}
+                  {
+                    <Link to={slug} style={{ color: "" }}>
+                      Read More &rarr;
+                    </Link>
+                  }
                 </div>
               </li>
             )
