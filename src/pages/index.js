@@ -151,7 +151,7 @@ const IndexPage = ({ data }) => {
                     }}
                   />
                   {
-                    <Link to={slug} style={{ color: "" }}>
+                    <Link to={slug} style={{ color: "#BD5719" }}>
                       Read More &rarr;
                     </Link>
                   }
