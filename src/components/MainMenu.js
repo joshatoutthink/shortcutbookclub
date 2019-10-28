@@ -16,9 +16,11 @@ const MainMenu = ({ layout = "sidebar" }) => {
       <li>
         <Link to="/discussion-guides">Discussion Guides</Link>
       </li>
-      {/* <li>
-        <Link>Polling</Link>
-      </li>*/}
+      {
+        <li>
+          <Link to="/book-chat">Book Chat</Link>
+        </li>
+      }
       <li>
         <Link to="/about-us">About Our Club</Link>
       </li>
